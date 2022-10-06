@@ -5,9 +5,10 @@ def main():
     pesos_3=[0.8,0.35,0.1]
     pesos_4=[-0.23,-0.79,0.56]
     entradas=[1,0,0]
-    neurona_1=Neurona_oculta(pesos_1,entradas)
-    neurona_2=Neurona_oculta(pesos_2,entradas)
-    neurona_3=Neurona_oculta(pesos_3,entradas)
+    delta=0
+    neurona_1=Neurona_oculta(pesos_1,entradas,delta)
+    neurona_2=Neurona_oculta(pesos_2,entradas,delta)
+    neurona_3=Neurona_oculta(pesos_3,entradas,delta)
     
     
 main()

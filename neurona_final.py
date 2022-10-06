@@ -11,6 +11,7 @@ class Neurona_final:
         salida_real=self.sigmoidea(prod_escalar)
         variacion=self.salida-salida_real
         delta=salida_real*(1-salida_real)*variacion
+        return delta
     
     def sigmoidea(self,prod_escalar):
         sig = 1 / (1 + math.exp(-prod_escalar))
