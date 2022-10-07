@@ -1,10 +1,10 @@
 import math
 import numpy as np
 class Neurona_final:
-    def __init__(self,pesos,salidas,entradas):
+    def __init__(self,pesos,salida,entradas):
         self.pesos=pesos
         self.entradas=entradas
-        self.salidas=salidas
+        self.salida=salida
 
     def obtener_salida(self):
         prod_escalar=np.dot(self.pesos,self.entradas)

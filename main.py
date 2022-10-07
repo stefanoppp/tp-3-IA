@@ -19,5 +19,5 @@ def main():
                                                             neurona_1.obtener_salida(),
                                                             neurona_2.obtener_salida(),
                                                             neurona_3.obtener_salida()])
-    print(neurona_final.obtener_salida())
+    print(neurona_final.obtener_delta())
 main()
