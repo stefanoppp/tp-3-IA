@@ -3,8 +3,6 @@ from neuronas_ocultas import Neurona_oculta
 
 def main():
     
-
-    
     entradas=[[1,0,0],[1,1,1],[0,1,1],[0,0,0],[0,0,1]]
     
     salidas=[1,0,0,0,1]
@@ -19,5 +17,10 @@ def main():
                                                             neurona_1.obtener_salida(),
                                                             neurona_2.obtener_salida(),
                                                             neurona_3.obtener_salida()])
-    print(neurona_final.obtener_delta())
+    delta=neurona_final.obtener_delta()
+    
+    pesos_1=neurona_1.actualizar_pesos(delta)
+    pesos_2=neurona_2.actualizar_pesos(delta)
+    pesos_3=neurona_3.actualizar_pesos(delta)
+    
 main()
