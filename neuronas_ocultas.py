@@ -9,6 +9,10 @@ class Neurona_oculta:
     def obtener_salida(self):
         prod_escalar=np.dot(self.pesos,self.entradas)
         salida_real=self.sigmoidea(prod_escalar)
+        return salida_real
+    
+    def calcular_delta(self):
+        salida_real=self.obtener_salida()
         delta_oculto=salida_real*(1-salida_real)*self.delta
         for i in range(len(self.pesos)):
             self.pesos[i]=self.pesos[i]+self.entradas[i]*delta_oculto
