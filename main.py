@@ -31,17 +31,17 @@ def main():
         i=0
         # NEURONAS OCULTAS
         for neurona in capa_oculta:
-            nuevos_pesos=[]
+            nuevos_pesos_ocultos=[]
             error_oculto=neurona.obtener_error(neurona_final.pesos[i+1],error_red)
             
             for peso in neurona.pesos:
                 peso=peso+(neurona.lr*neurona.entradas[i]*error_oculto)
-                nuevos_pesos.append(peso)
-            print(nuevos_pesos)
-            neurona.pesos=nuevos_pesos
+                nuevos_pesos_ocultos.append(peso)
+            print(nuevos_pesos_ocultos)
+            neurona.pesos=nuevos_pesos_ocultos
         
-        pesos_actualizados=neurona_final.calcular_nuevos_pesos()
-        neurona_final.pesos=pesos_actualizados
-        print(pesos_actualizados)   
-        
+        nuevos_pesos_finales=neurona_final.calcular_nuevos_pesos()
+        neurona_final.pesos=nuevos_pesos_finales
+        print(nuevos_pesos_finales)   
+        print("\n")
 main()
