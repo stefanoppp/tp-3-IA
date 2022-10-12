@@ -5,7 +5,7 @@ class Neurona_final:
         self.pesos=pesos
         self.entradas=entradas
         self.salida=salida
-        self.lr=0.2
+        self.lr=0.4
     
     def obtener_salida(self):
         prod_escalar=np.dot(self.pesos,self.entradas)
