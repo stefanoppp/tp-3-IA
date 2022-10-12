@@ -31,7 +31,7 @@ def main():
     peso_11_historial=[]
     peso_12_historial=[]
     peso_13_historial=[]
-    
+    historial_error=[]
     for i in range(iteraciones):
         
         for j in range(len(entradas)):
@@ -43,6 +43,7 @@ def main():
             no_1.pesos
             neurona_final=Neurona_final(pesos_finales,salidas[j],[1,no_1.obtener_salida(),no_2.obtener_salida(),no_3.obtener_salida()])
             error_red=neurona_final.obtener_error()
+            historial_error.append(error_red)
             k=0
             conteo=0
             for neurona in neuronas_ocultas:
@@ -70,6 +71,8 @@ def main():
             peso_13_historial.append(neurona_final.pesos[3])
             
             
+            
+      
     plt.plot(peso_1_historial,'g')
     plt.plot(peso_2_historial,'r')
     plt.plot(peso_3_historial,'y')
@@ -83,6 +86,7 @@ def main():
     plt.plot(peso_11_historial,'o')
     plt.plot(peso_12_historial,'k')
     plt.plot(peso_13_historial,'m')
-    
+    plt.show()
+    plt.plot(historial_error,'k')
     plt.show()
 main()
