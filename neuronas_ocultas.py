@@ -23,7 +23,6 @@ class Neurona_oculta:
             self.pesos[i]=self.pesos[i]+(self.lr*self.entradas[i]*error)
         return self.pesos
 
-
     def sigmoidea(self,prod_escalar):
         sig = 1 / (1 + math.exp(-prod_escalar))
         return sig

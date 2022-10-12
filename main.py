@@ -63,7 +63,6 @@ def main():
                     peso_9_historial.append(neurona.pesos[2])
                 k=k+1
                 conteo+=1
-            # ARREGLAR PESOS FINALES
             neurona_final.calcular_nuevos_pesos(error_red)
             peso_10_historial.append(neurona_final.pesos[0])
             peso_11_historial.append(neurona_final.pesos[1])

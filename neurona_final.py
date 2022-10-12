@@ -21,8 +21,7 @@ class Neurona_final:
         for i in range(len(self.pesos)):
             self.pesos[i]=self.pesos[i]+(self.lr*self.entradas[i]*error)
         return self.pesos
-    # los valores de la ulitma neurona para calcular pesos de capa oculta, se 
-    # actualizan en la 2da vuelta
+
     def sigmoidea(self,prod_escalar):
         sig = 1 / (1 + math.exp(-prod_escalar))
         return sig
