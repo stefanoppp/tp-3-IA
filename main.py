@@ -29,7 +29,6 @@ def main():
             
             neurona_final=Neurona_final(pesos_finales,salidas[j],[1,no_1.obtener_salida(),no_2.obtener_salida(),no_3.obtener_salida()])
             error_red=neurona_final.obtener_error()
-            nuevos_pesos_finales=neurona_final.calcular_nuevos_pesos()
             k=0
             for neurona in neuronas_ocultas:
                 error=neurona.obtener_error(pesos_finales[k+1],error_red)
@@ -38,7 +37,7 @@ def main():
                 print(neurona.pesos)
                 k=k+1
             # ARREGLAR PESOS FINALES
-            neurona_final.pesos=nuevos_pesos_finales
+            neurona_final.calcular_nuevos_pesos(error_red)
             print(neurona_final.pesos)
             print("\n")
 main()
