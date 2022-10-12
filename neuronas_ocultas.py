@@ -4,7 +4,7 @@ class Neurona_oculta:
     def __init__(self,pesos,entradas):
         self.pesos=pesos
         self.entradas=entradas
-        self.lr=0.4
+        self.lr=0.5
         
     def obtener_salida(self):
         prod_escalar=np.dot(self.pesos,self.entradas)
